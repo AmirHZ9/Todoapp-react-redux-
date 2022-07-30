@@ -1,7 +1,41 @@
-.enableEdit{
+.container {
+    margin: 0 auto;
+    text-align: center;
+    width: 60%;
+}
+.container input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.37) ;
+}
+.container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    margin-top: 30px;
+
+}
+.container p{
+    flex: 1;
+    margin: 0 10px;
+    width: fit-content;
+}
+.container button{
+cursor: pointer;
+}
+.enableEdit {
     border: 1px solid gray;
 }
 
-.disableEdite{
-border: none;
+.disableEdite {
+    border: none;
+    flex: 1;
+}
+.checkTodo {
+    opacity: 0.5;
+}
+.oncheckTodo {
+    opacity: 1;
+}
+.checkTodo p {
 }

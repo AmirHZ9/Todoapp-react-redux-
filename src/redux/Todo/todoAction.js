@@ -9,6 +9,11 @@ export const editTodo = (todo) => {
   return { type: "editTodo", payload: todo };
 };
 export const confirmEditTodo = (todo) => {
-    return { type: "confirmEditTodo", payload: todo };
-  };
-  
+  return { type: "confirmEditTodo", payload: todo };
+};
+export const checkTodo = (todo) => {
+  return { type: "checkTodo", payload: todo };
+};
+export const oncheckTodo = (todo) => {
+  return { type: "oncheckTodo", payload: todo };
+};

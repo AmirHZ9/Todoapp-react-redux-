@@ -7,8 +7,8 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case "addTodo":
-      state.todo.push({ id: v4(), todo: action.payload ,  editTodo:false });
-console.log(state)
+      state.todo.push({ id: v4(), todo: action.payload ,  editTodo:false ,check:false});
+
       return {
         ...state,
         todo: state.todo,
@@ -22,17 +22,27 @@ console.log(state)
         todo: newitem,
       };
 
-      case "editTodo":
-        action.payload.editTodo = true
+    case "editTodo":
+    action.payload.editTodo = true
+  
+        return{
+            ...state
+        }
+    case "confirmEditTodo" :
+    action.payload.editTodo = false
+        return{
+            ...state
+        }
+
+    case "checkTodo" :
+     
+        action.payload.check = !action.payload.check
+        console.log(action.payload.check)
         console.log(state)
-          return{
-              ...state
-          }
-          case "confirmEditTodo" :
-            action.payload.editTodo = false
-              return{
-                  ...state
-              }
+            return{
+                ...state
+            }   
+
     default:
       return state;
   }
