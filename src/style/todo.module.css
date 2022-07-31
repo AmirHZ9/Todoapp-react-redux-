@@ -39,6 +39,7 @@ p:focus-visible {
 }
 .todosBtn {
   border-radius: 50%;
+  line-height: 30px;
   border: 1px solid gray;
   outline: none;
   width: 30px;
