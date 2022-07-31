@@ -1,0 +1,46 @@
+body {
+  box-sizing: border-box;
+  background-color: #222222;
+  color: #7b7b7b;
+}
+.title {
+  position: absolute;
+  top: 10px;
+  margin: 0;
+}
+.container {
+  margin: 100px auto;
+  width: 60%;
+}
+.container input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.37);
+  background-color: transparent;
+  padding: 15px 5px;
+  width: 100%;
+  color: #7b7b7b;
+  font-size: 1.5rem;
+}
+::placeholder {
+  color: #7b7b7b;
+  font-size: 1.5rem;
+}
+
+.todoStatus a {
+  margin-top: 8px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #7b7b7b;
+  border: none;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.todoStatus a:hover {
+  color: white;
+}
+
+.activeId {
+  color: white !important;
+}

@@ -1,41 +1,54 @@
 .container {
-    margin: 0 auto;
-    text-align: center;
-    width: 60%;
+  border-bottom: 1px solid gray;
+  width: 60%;
+  margin: 0 auto;
 }
-.container input{
-    outline: none;
-    border: none;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.37) ;
+.todoText {
+  padding: 5px;
+  flex: 1;
+  font-size: 20px;
 }
-.container div {
+.enableEdit {
+  border: 1px solid gray;
+  border-radius: 8px;
+}
+
+p:focus-visible {
+  border: none;
+  outline: none;
+  border: 1px solid gray;
+}
+.disableEdit {
+  border: none;
+  flex: 1;
+}
+.checkTodo {
+  opacity: 0.5;
+  text-decoration: line-through rgba(19, 219, 19, 0.521) 3px;
+}
+
+.oncheckTodo {
+  opacity: 1;
+}
+
+.checkTodo,
+.oncheckTodo {
   display: flex;
   justify-content: center;
   align-items: center;
-    margin-top: 30px;
-
 }
-.container p{
-    flex: 1;
-    margin: 0 10px;
-    width: fit-content;
-}
-.container button{
-cursor: pointer;
-}
-.enableEdit {
-    border: 1px solid gray;
-}
-
-.disableEdite {
-    border: none;
-    flex: 1;
-}
-.checkTodo {
-    opacity: 0.5;
-}
-.oncheckTodo {
-    opacity: 1;
-}
-.checkTodo p {
+.todosBtn {
+  border-radius: 50%;
+  border: 1px solid gray;
+  outline: none;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  color: #7b7b7b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  cursor: pointer;
+  margin: 0 5px;
 }

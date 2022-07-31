@@ -1,13 +1,17 @@
 import { v4 } from "uuid";
 const initialState = {
   todo: [],
-
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case "addTodo":
-      state.todo.push({ id: v4(), todo: action.payload ,  editTodo:false ,check:false});
+      state.todo.push({
+        id: v4(),
+        todo: action.payload,
+        editTodo: false,
+        check: false,
+      });
 
       return {
         ...state,
@@ -23,25 +27,18 @@ const reducer = (state = initialState, action) => {
       };
 
     case "editTodo":
-    action.payload.editTodo = true
-  
-        return{
-            ...state
-        }
-    case "confirmEditTodo" :
-    action.payload.editTodo = false
-        return{
-            ...state
-        }
+      action.payload.editTodo = !action.payload.editTodo;
 
-    case "checkTodo" :
-     
-        action.payload.check = !action.payload.check
-        console.log(action.payload.check)
-        console.log(state)
-            return{
-                ...state
-            }   
+      return {
+        ...state,
+      };
+
+    case "checkTodo":
+      action.payload.check = !action.payload.check;
+
+      return {
+        ...state,
+      };
 
     default:
       return state;
